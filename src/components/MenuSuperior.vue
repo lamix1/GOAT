@@ -2,6 +2,11 @@
 import { ref } from 'vue';
 
 const menuAberto = ref(false);
+
+const fecharMenu = () => {
+  menuAberto.value = false;
+};
+
 </script>
 
 <template>
@@ -10,17 +15,15 @@ const menuAberto = ref(false);
       <img src="@/assets/logo.png" alt="Logo" />
     </div>
     <nav>
-      <ul :class="menuAberto ? 'menu' : ''">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#services">Como Participar</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li><a href="ajuda">Ajuda</a></li>
+        <ul :class="{ 'menu': menuAberto }">
+        <li><a href="#home" @click="fecharMenu">Home</a></li>
+        <li><a href="#about" @click="fecharMenu">Sobre</a></li>
+        <li><a href="#services" @click="fecharMenu">Como Participar</a></li>
+        <li><a href="#contact" @click="fecharMenu">Contato</a></li>
+        <li><a href="#ajuda" @click="fecharMenu">Ajuda</a></li>
       </ul>
     </nav>
     <div class="header--icons">
-      <Account />
-      <CartPlus />
       <Menu class="menu-hamburger" @click="menuAberto = !menuAberto" />
     </div>
   </header>
@@ -45,25 +48,37 @@ header {
   height: auto;
   margin-right: 0.5rem;
 }
+
+nav {
+  flex: 1;
+}
+
 nav ul {
   display: flex;
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-}
-nav li {
+  justify-content: flex-end;
   list-style: none;
 }
+
+nav li {
+  margin-left: 10px;
+  list-style: none;
+}
+
 nav a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
 }
+
 .header--icons {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .menu-hamburger {
   display: none;
 }
@@ -74,6 +89,7 @@ nav a {
   }
   .menu-hamburger {
     display: block;
+    cursor: pointer;
   }
 
   nav .menu {
@@ -87,6 +103,7 @@ nav a {
     top: 60px;
     text-align: right;
     padding: 10px 16px;
+    z-index: 1000;
   }
   nav .menu li {
     display: block;
