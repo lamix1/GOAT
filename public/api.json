@@ -1,0 +1,22 @@
+{
+    "campeonatos": [
+      {
+        "id": 1,
+        "nome": "Championship 1",
+        "dataInicio": "2024-01-01",
+        "dataTermino": "2024-01-15",
+        "jogo": "Game 1",
+        "numeroDeTimes": 8,
+        "vencedor": "Team A"
+      },
+      {
+        "id": 2,
+        "nome": "Championship 2",
+        "dataInicio": "2024-02-01",
+        "dataTermino": "2024-02-10",
+        "jogo": "Game 2",
+        "numeroDeTimes": 16,
+        "vencedor": "Team B"
+      }
+    ]
+  }
