@@ -16,7 +16,13 @@ const fecharMenu = () => {
     </div>
     <nav>
         <ul :class="{ 'menu': menuAberto }">
-        <li><a href="#home" @click="fecharMenu">Home</a></li>
+
+        <li>
+          <a href="#" @click="fecharMenu">
+            <RouterLink to="/">Home</RouterLink>
+          </a>
+        </li>
+
         <li><a href="#about" @click="fecharMenu">Sobre</a></li>
         <li><a href="#services" @click="fecharMenu">Como Participar</a></li>
         <li><a href="#contact" @click="fecharMenu">Contato</a></li>

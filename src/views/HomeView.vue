@@ -1,8 +1,8 @@
 <script setup>
 
-const handleClick = () => {
-  console.log("Botão 'Campeonatos Fechados' clicado");
-};
+// const handleClick = () => {
+//   console.log("Botão 'Campeonatos Fechados' clicado");
+// };
 
 </script>
 
@@ -19,9 +19,11 @@ const handleClick = () => {
     Campeonatos Fechados
   </button>
 </router-link>
-  <button class="camp-button" @click="handleClick">
+<router-link to="/campsfechados" custom v-slot="{ navigate }">
+  <button @click="navigate" role="link" type="button" class="camp-button">
     Campeonatos Abertos
   </button>
+</router-link>
 </div>
 
 </div>
