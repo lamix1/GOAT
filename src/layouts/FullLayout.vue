@@ -1,11 +1,14 @@
 <script setup>
 import MenuSuperior from '@/components/MenuSuperior.vue'
+import FooterLayout from '@/components/FooterLayout.vue'
 </script>
 <template>
   <MenuSuperior />
   <main>
     <RouterView />
+    <FooterLayout />
   </main>
+  
 </template>
 <style>
 header,
