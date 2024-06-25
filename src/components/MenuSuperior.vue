@@ -23,7 +23,12 @@ const fecharMenu = () => {
           </a>
         </li>
 
-        <li><a href="#about" @click="fecharMenu">Sobre</a></li>
+        <li>
+          <a href="#">
+            <RouterLink to="/sobre">Sobre</RouterLink>
+          </a>
+        </li>
+
         <li><a href="#services" @click="fecharMenu">Como Participar</a></li>
         <li><a href="#contact" @click="fecharMenu">Contato</a></li>
         <li><a href="#ajuda" @click="fecharMenu">Ajuda</a></li>

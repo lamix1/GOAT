@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import CampsFechadosView from '@/views/CampsFechadosView.vue';
 import CampsAbertosView from '@/views/CampsAbertosView.vue';
+import SobreView from '@/views/SobreView.vue';
 
 import FullLayout from '@/layouts/FullLayout.vue';
 // import BlankLayout from '@/layouts/BlankLayout.vue';
@@ -18,6 +19,14 @@ const router = createRouter({
         name: 'home',
         component: HomeView,
       },
+      ]
+    },
+
+    {
+      path: '/',
+      component: FullLayout,
+      children: [
+
       {
         path: '/campsfechados',
         name: 'CampsFechados',
@@ -27,6 +36,11 @@ const router = createRouter({
         path: '/campsabertos',
         name: 'CampsAbertos',
         component: CampsAbertosView,
+      },
+      {
+        path: '/sobre',
+        name: 'sobre',
+        component: SobreView,
       }
     ]
     }
