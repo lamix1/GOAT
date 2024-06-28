@@ -26,7 +26,7 @@ $dark: #181818 !default;
 
 $blue: #63b3ed !default;
 $indigo: #596cff !default;
-$purple: #6f42c1 !default;
+$purple: #7E59D8 !default;
 $pink: #d63384 !default;
 $red: #f56565 !default;
 $rose: #e91e63 !default;
@@ -58,7 +58,7 @@ $primary: #e91e63 !default;
 $secondary: #7b809a !default;
 $info: #1a73e8 !default;
 $success: #4caf50 !default;
-$warning: #fb8c00 !default;
+$warning: #F26925 !default;
 $danger: #f44335 !default;
 $light: $gray-200 !default;
 $dark: $h-color !default;
@@ -87,14 +87,14 @@ $secondary-gradient-state: #495361 !default;
 $info-gradient: #49a3f1 !default;
 $info-gradient-state: #1a73e8 !default;
 
-$success-gradient: #66bb6a !default;
-$success-gradient-state: #43a047 !default;
+$success-gradient: #7E59D8 !default;
+$success-gradient-state: #7E59D8 !default;
 
 $danger-gradient: #ef5350 !default;
 $danger-gradient-state: #e53935 !default;
 
-$warning-gradient: #ffa726 !default;
-$warning-gradient-state: #fb8c00 !default;
+$warning-gradient: #F26925 !default;
+$warning-gradient-state: #F26925 !default;
 
 $dark-gradient: #42424a !default;
 $dark-gradient-state: #191919 !default;
@@ -464,13 +464,15 @@ $box-shadow-info: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
 $box-shadow-warning: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
   0 7px 10px -5px rgba(255, 152, 0, 0.4) !default;
 $box-shadow-success: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
-  0 7px 10px -5px rgba(76, 175, 80, 0.4) !default;
+  0 7px 10px -5px rgba(126, 89, 216, 0.4) !default;
 $box-shadow-danger: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
   0 7px 10px -5px rgba(244, 67, 54, 0.4) !default;
 $box-shadow-dark: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
   0 7px 10px -5px rgba(64, 64, 64, 0.4) !default;
 $box-shadow-light: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
   0 7px 10px -5px rgba(233, 30, 99, 0.4) !default;
+$box-shadow-goat: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+   0 7px 10px -5px #7E59D8 !default;
 
 $component-active-color: $white !default;
 $component-active-bg: $primary !default;

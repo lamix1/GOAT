@@ -2,8 +2,8 @@
   <div id="app">
     <main>
       <section class="camp">
-        <div class="camp-card" v-for="camp in campItems" :key="camp.id">
-          <img :src="camp.image" :alt="camp.title">
+        <div class="camp-card" v-for="camp in campItems" :key="camp.id" @click="openModal(camp)">
+          <img class="img-card" :src="camp.image" :alt="camp.title">
           <div class="camp-content">
             <p class="category">{{ camp.category }}</p>
             <h3>{{ camp.title }}</h3>
@@ -12,14 +12,21 @@
         </div>
       </section>
     </main>
+
+    <Modal v-if="selectedCamp" :camp="selectedCamp" @close="closeModal" />
+
   </div>
 </template>
 
 <script>
 import goatImage from '@/assets/GOAT_2.jpg';
+import Modal from '@/components/ModalCard.vue';
 
 export default {
-  name: 'App',
+  name: 'CampsFechadosView',
+  components: {
+    Modal,
+  },
   data() {
     return {
       campItems: [
@@ -28,40 +35,64 @@ export default {
           category: 'Campeonato',
           title: 'Campeonato de CSGO',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-          image: goatImage
+          image: goatImage,
+          startDate: '01/05/2024',
+          endDate: '10/05/2024',
+          winner: 'Xablau'
         },
         {
           id: 2,
           category: 'Campeonato',
           title: 'Campeonato Valorant',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-          image: goatImage
+          image: goatImage,
+          startDate: '01/05/2024',
+          endDate: '10/05/2024',
+          winner: 'Xablau',
         },
         {
           id: 3,
           category: 'Campeonato',
           title: 'Campeonato de CSGO',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-          image: goatImage
+          image: goatImage,
+          startDate: '01/05/2024',
+          endDate: '10/05/2024',
+          winner: 'Xablau',
         },
         {
           id: 4,
           category: 'Campeonato',
           title: 'Campeonato Valorant',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-          image: goatImage
+          image: goatImage,
+          startDate: '01/05/2024',
+          endDate: '10/05/2024',
+          winner: 'Xablau',
         },
         {
           id: 5,
           category: 'Campeonato',
           title: 'Campeonato LOL',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-          image: goatImage
+          image: goatImage,
+          startDate: '01/05/2024',
+          endDate: '10/05/2024',
+          winner: 'Xablau',
         }
-      ]
+      ],
+      selectedCamp: null,
     };
-  }
-}
+  },
+  methods: {
+    openModal(camp) {
+      this.selectedCamp = camp;
+    },
+    closeModal() {
+      this.selectedCamp = null;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -164,4 +195,5 @@ main {
 .camp-card:hover {
   transform: translateY(-10px);
 }
+
 </style>

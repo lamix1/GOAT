@@ -29,6 +29,13 @@ defineProps({
     type: String,
     default: "",
   },
+  action: {
+    type: Array,
+    route: String,
+    label: String,
+    color: String,
+    required: true,
+  }
 });
 </script>
 <script>
@@ -45,7 +52,7 @@ export default {
         :class="`${
           typeof icon == 'object'
             ? `text-${icon.color} text-${icon.size}`
-            : 'text-success text-3xl'
+            : 'text-warning text-3xl'
         }`"
         >{{ typeof icon == "object" ? icon.component : icon }}</i
       >
@@ -60,6 +67,17 @@ export default {
       <p :class="typeof description == 'string' ? 'pe-5' : description.class">
         {{ typeof description == "string" ? description : description.text }}
       </p>
+      <div class="buttons-group">
+        <a
+          v-for="({ route, color, label }, index) of action"
+          :key="index"
+          :href="route"
+          target="_blank"
+          class="btn btn-sm mt-3 inline-block ms-1"
+          :class="`${color ? `btn-${color}` : 'btn-warning'}`"
+          >{{ label }}</a
+        >
+      </div>
     </div>
   </div>
 </template>

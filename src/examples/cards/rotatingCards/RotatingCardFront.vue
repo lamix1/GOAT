@@ -26,7 +26,7 @@ defineProps({
   <div
     class="front front-background"
     :style="{
-      backgroundImage: 'black',
+      backgroundImage: 'white',
       backgroundSize: 'cover',
     }"
   >
