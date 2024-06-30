@@ -6,9 +6,8 @@ import FooterLayout from '@/components/FooterLayout.vue'
   <MenuSuperior />
   <main>
     <RouterView />
-    <FooterLayout />
   </main>
-  
+  <FooterLayout />
 </template>
 <style>
 header,

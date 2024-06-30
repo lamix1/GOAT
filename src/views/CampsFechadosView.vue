@@ -20,7 +20,7 @@
 
 <script>
 import goatImage from '@/assets/GOAT_2.jpg';
-import Modal from '@/components/ModalCard.vue';
+import Modal from '@/components/ModalFechados.vue';
 
 export default {
   name: 'CampsFechadosView',

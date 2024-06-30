@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const menuAberto = ref(false);
 
@@ -29,7 +30,12 @@ const fecharMenu = () => {
           </a>
         </li>
 
-        <li><a href="#services" @click="fecharMenu">Como Participar</a></li>
+        <li>
+          <a href="#">
+            <RouterLink to="/comoparticipar">Como Participar</RouterLink>
+          </a>
+        </li>
+
         <li><a href="#contact" @click="fecharMenu">Contato</a></li>
         <li><a href="#ajuda" @click="fecharMenu">Ajuda</a></li>
       </ul>

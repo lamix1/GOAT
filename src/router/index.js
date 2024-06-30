@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue';
 import CampsFechadosView from '@/views/CampsFechadosView.vue';
 import CampsAbertosView from '@/views/CampsAbertosView.vue';
 import SobreView from '@/views/SobreView.vue';
+import ComoParticiparView from '@/views/ComoParticiparView.vue';
 
 import FullLayout from '@/layouts/FullLayout.vue';
 // import BlankLayout from '@/layouts/BlankLayout.vue';
@@ -41,6 +42,11 @@ const router = createRouter({
         path: '/sobre',
         name: 'sobre',
         component: SobreView,
+      },
+      {
+        path: '/comoparticipar',
+        name: 'comoparticipar',
+        component: ComoParticiparView,
       }
     ]
     }
