@@ -1,13 +1,30 @@
 <script>
 
+import Card from '../components/CardHome.vue';
+
+export default {
+  components: {
+    Card
+  }
+};
+
 </script>
 
 <template>
   <div class="container">
 
-    <div class="image-container">
-    <img src="@/assets/background_lan.png" alt="" class="background-image">
-  </div>
+    <Card>
+      <template v-slot:front>
+        <div class="custom-front-content">
+          Front Card
+        </div>
+      </template>
+      <template v-slot:back>
+        <div class="custom-back-content">
+          Back Card 
+        </div>
+      </template>
+      </Card>
   
   <div class="button-container"> 
   <router-link to="/campsfechados" custom v-slot="{ navigate }">

@@ -36,17 +36,12 @@ onMounted(() => {
                   <h4
                     class="text-white font-weight-bolder text-center mt-2 mb-0"
                   >
-                    Sign in
+                    Login
                   </h4>
                   <div class="row mt-3">
                     <div class="col-2 text-center ms-auto">
                       <a class="btn btn-link px-3" href="javascript:;">
                         <i class="fa fa-facebook text-white text-lg"></i>
-                      </a>
-                    </div>
-                    <div class="col-2 text-center px-1">
-                      <a class="btn btn-link px-3" href="javascript:;">
-                        <i class="fa fa-github text-white text-lg"></i>
                       </a>
                     </div>
                     <div class="col-2 text-center me-auto">
@@ -68,7 +63,7 @@ onMounted(() => {
                   <MaterialInput
                     id="password"
                     class="input-group-outline mb-3"
-                    :label="{ text: 'Password', class: 'form-label' }"
+                    :label="{ text: 'Senha', class: 'form-label' }"
                     type="password"
                   />
                   <MaterialSwitch
@@ -76,7 +71,7 @@ onMounted(() => {
                     id="rememberMe"
                     labelClass="mb-0 ms-3"
                     checked
-                    >Remember me</MaterialSwitch
+                    >Salvar Login</MaterialSwitch
                   >
 
                   <div class="text-center">
@@ -85,15 +80,15 @@ onMounted(() => {
                       variant="gradient"
                       color="success"
                       fullWidth
-                      >Sign in</MaterialButton
+                      >Login</MaterialButton
                     >
                   </div>
                   <p class="mt-4 text-sm text-center">
-                    Don't have an account?
+                    Não tem uma conta?
                     <a
                       href="#"
                       class="text-success text-gradient font-weight-bold"
-                      >Sign up</a
+                      >Cadastre-se</a
                     >
                   </p>
                 </form>
